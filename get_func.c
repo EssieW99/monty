@@ -1,3 +1,4 @@
+#define _POSIX_C_SOURCE 200809L
 #include "monty.h"
 
 /**
@@ -19,8 +20,12 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 	};
 	unsigned int i = 0;
 	char *j;
-
+	
 	j = strtok(line, " \t\n");
+	if (j == NULL)
+	{
+		return(0);
+	}
 	var.value = strtok(NULL, " \t\n");
 	while (ops[i].opcode != NULL && j != NULL)
 

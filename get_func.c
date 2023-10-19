@@ -28,9 +28,9 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 
 	while (*trim && isspace(*trim))
 		trim++;
-	if (*trim == '\0')
+	j = strtok(trim, " \t\n\r");
+	if (j == NULL)
 		return (0);
-	j = strtok(line, " \t\n\r");
 	if (j && j[0] == '#')
 		return (0);
 	var.value = strtok(NULL, " \t\n\r");

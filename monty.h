@@ -50,8 +50,8 @@ typedef struct global_variable
 	char *line;
 } var_s;
 extern var_s var;
-void op_push(stack_t **head, unsigned int count);
 int main(int argc, char **argv);
+void op_push(stack_t **head, unsigned int count);
 void add_node(stack_t **head, int n);
 void op_pall(stack_t **head, unsigned int count);
 void frees_stack(stack_t *head);
@@ -59,5 +59,6 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file);
 void op_pint(stack_t **head, unsigned int count);
 void op_pop(stack_t **head, unsigned int count);
 void op_swap(stack_t **head, unsigned int count);
+void op_add(stack_t **head, unsigned int count);
 
 #endif

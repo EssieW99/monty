@@ -24,11 +24,11 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
-	char *j, *trim = line;
+	char *j;
 
-	while (*trim && isspace(*trim))
-		trim++;
-	j = strtok(trim, " \t\n\r");
+	while (*line && isspace(*line))
+		line++;
+	j = strtok(line, " \t\n\r");
 	if (j == NULL)
 		return (0);
 	if (j && j[0] == '#')

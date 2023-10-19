@@ -24,7 +24,7 @@ void op_add(stack_t **head, unsigned int count)
 	second->n = tmp;
 	*head = second;
 	free(first);
-	
+
 
 
 }

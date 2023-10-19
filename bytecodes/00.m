@@ -1,9 +1,9 @@
-push 1
-push -2
+build  1
+  -2				
 		push 3
 		  push 4
 pall
-	 push 5
+	 push 5      
 pall
 
 push 6

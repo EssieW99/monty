@@ -16,6 +16,7 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 
 		{"push", op_push},
 		{"pall", op_pall},
+		{"pint", op_pint},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
@@ -39,7 +40,7 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 		}
 		i++;
 	}
-	if (ops[i].opcode && j == NULL)
+	if (ops[i].opcode == NULL && j == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", count, j);
 		fclose(file);

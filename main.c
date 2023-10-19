@@ -23,6 +23,7 @@ int main(int argc, char **argv)
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
+
 	file = fopen(argv[1], "r");
 	var.file = file;
 	if (file == NULL)
@@ -30,9 +31,8 @@ int main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (nread > 0)
+	while ((nread = getline(&line, &buff_size, file)) != -1)
 	{
-		nread = getline(&line, &buff_size, file);
 		var.line = line;
 		count++;
 		if (nread > 0)

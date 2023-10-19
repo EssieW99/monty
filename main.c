@@ -3,7 +3,7 @@
 var_s var = {NULL, NULL, NULL};
 
 /**
- * main - the monty code interpreter
+ * main - the main function
  * @argc: the number of arguments
  * @argv: argument vector
  *

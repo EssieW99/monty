@@ -18,6 +18,7 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 		{"pall", op_pall},
 		{"pint", op_pint},
 		{"pop", op_pop},
+		{"swap", op_swap},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;

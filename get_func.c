@@ -21,6 +21,7 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 		{"swap", op_swap},
 		{"add", op_add},
 		{"nop", op_nop},
+		{"sub", op_sub},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;

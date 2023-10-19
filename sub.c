@@ -13,7 +13,7 @@ void op_sub(stack_t **head, unsigned int count)
 	stack_t *second = (*head)->next;
 	int tmp;
 
-	if (head == NULL || *head == NULL)
+	if (*head == NULL || (*head)->next == NULL)
 	{
 		fprintf(stderr, "L%u: can't sub, stack too short\n", count);
 		free(var.line);

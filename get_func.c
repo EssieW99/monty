@@ -24,14 +24,16 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
-	char *j;
+	char *j, *trim = line;
 
-	j = strtok(line, " \t\n");
-	if (j == NULL)
+	while (*trim && isspace(*trim))
+		trim++;
+	if (*trim == '\0')
 		return (0);
+	j = strtok(line, " \t\n\r");
 	if (j && j[0] == '#')
 		return (0);
-	var.value = strtok(NULL, " \t\n");
+	var.value = strtok(NULL, " \t\n\r");
 	while (ops[i].opcode != NULL && j != NULL)
 	{
 		if (strcmp(j, ops[i].opcode) == 0)

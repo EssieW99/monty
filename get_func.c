@@ -20,6 +20,7 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 		{"pop", op_pop},
 		{"swap", op_swap},
 		{"add", op_add},
+		{"nop", op_nop},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
@@ -28,13 +29,10 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 	j = strtok(line, " \t\n");
 	if (j == NULL)
 		return (0);
-
 	if (j && j[0] == '#')
 		return (0);
-
 	var.value = strtok(NULL, " \t\n");
 	while (ops[i].opcode != NULL && j != NULL)
-
 	{
 		if (strcmp(j, ops[i].opcode) == 0)
 		{

@@ -57,5 +57,6 @@ void op_pall(stack_t **head, unsigned int count);
 void frees_stack(stack_t *head);
 int get_func(stack_t **stack, unsigned int count, char *line, FILE *file);
 void op_pint(stack_t **head, unsigned int count);
+void op_pop(stack_t **head, unsigned int count);
 
 #endif

@@ -12,7 +12,7 @@ void op_pint(stack_t **head, unsigned int count)
 
 	if (h == NULL)
 	{
-		fprintf(stderr, "L%d: can't pint, stack empty\n", count);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", count);
 		free(var.line);
 		free(var.file);
 		frees_stack(*head);

@@ -23,7 +23,6 @@ int main(int argc, char **argv)
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-
 	file = fopen(argv[1], "r");
 	var.file = file;
 	if (file == NULL)

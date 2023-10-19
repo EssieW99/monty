@@ -47,5 +47,5 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 		frees_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
-	return (1);
+	return (0);
 }

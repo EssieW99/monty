@@ -26,8 +26,6 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 	unsigned int i = 0;
 	char *j;
 
-	while (*line && isspace(*line))
-		line++;
 	j = strtok(line, " \t\n\r");
 	if (j == NULL)
 		return (0);

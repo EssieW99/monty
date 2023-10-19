@@ -14,8 +14,7 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 {
 	instruction_t ops[] = {
 
-		{"push", op_push},
-		{"pall", op_pall},
+		{"push", op_push}, {"pall", op_pall},
 		{"pint", op_pint},
 		{"pop", op_pop},
 		{"swap", op_swap},
@@ -23,6 +22,7 @@ int get_func(stack_t **stack, unsigned int count, char *line, FILE *file)
 		{"nop", op_nop},
 		{"sub", op_sub},
 		{"div", op_div},
+		{"mul", op_mul},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
